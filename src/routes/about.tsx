@@ -9,8 +9,8 @@ import { resolveImage, aboutImage, breederImage } from "@/lib/images";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Rachel Miniature Dachshunds" },
-      { name: "description", content: "Two decades of devotion to the miniature dachshund. Meet Rachel and the family behind our breeding program." },
+      { title: "About Us — Country Charm Dachshunds" },
+      { name: "description", content: "Two decades of devotion to the miniature dachshund. Meet the family behind our breeding program." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -32,7 +32,7 @@ function AboutPage() {
           <SectionHeader
             eyebrow="Our story"
             title="A quiet promise, kept for twenty years."
-            description="Rachel Miniature Dachshunds began with one extraordinary little dog and a love for this breed that has never wavered."
+            description="Country Charm Dachshunds began with one extraordinary little dog and a love for this breed that has never wavered."
           />
           <Reveal className="mt-12 overflow-hidden rounded-3xl shadow-elegant">
             <img src={top} alt="Our miniature dachshunds at home" className="aspect-[16/9] w-full object-cover" />

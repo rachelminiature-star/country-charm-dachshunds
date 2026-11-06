@@ -1,1 +1,0 @@
-DELETE FROM public.messages WHERE email = 'testbuyer@example.com';

@@ -1,8 +1,8 @@
 export const SITE = {
-  name: "Rachel Miniature Dachshunds",
-  shortName: "Rachel Dachshunds",
-  domain: "rachelminiaturedaschunds.com",
-  email: "info@rachelminiaturedaschunds.com",
+  name: "Country Charm Dachshunds",
+  shortName: "Country Charm Dachshunds",
+  domain: "countrycharmdachshunds.com",
+  email: "info@countrycharmdachshunds.com",
   tagline: "Heirloom miniature dachshunds, raised in our home.",
   description:
     "AKC-registered miniature dachshund puppies raised with love, health-tested, and matched to families who'll love them forever. Long-haired, short-haired, English cream, red, and rare coats.",
@@ -10,7 +10,7 @@ export const SITE = {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
   },
-  formSubmitUrl: "https://formsubmit.co/ajax/info@rachelminiaturedaschunds.com",
+  formSubmitUrl: "https://formsubmit.co/ajax/info@countrycharmdachshunds.com",
 };
 
 export const NAV_LINKS = [

@@ -9,7 +9,7 @@ import { testimonialsQuery } from "@/lib/queries";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Testimonials — Rachel Miniature Dachshunds" },
+      { title: "Testimonials — Country Charm Dachshunds" },
       { name: "description", content: "Stories from the families our miniature dachshund puppies have joined." },
       { property: "og:url", content: "/testimonials" },
     ],

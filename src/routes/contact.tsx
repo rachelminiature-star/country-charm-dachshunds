@@ -10,7 +10,7 @@ import { forwardEmail } from "@/lib/email";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Rachel Miniature Dachshunds" },
+      { title: "Contact — Country Charm Dachshunds" },
       { name: "description", content: "Inquire about an available miniature dachshund puppy, ask a question, or join our waitlist. Replies within 24 hours." },
       { property: "og:url", content: "/contact" },
     ],

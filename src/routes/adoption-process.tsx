@@ -6,7 +6,7 @@ import { StaggerGroup, StaggerItem } from "@/components/motion";
 export const Route = createFileRoute("/adoption-process")({
   head: () => ({
     meta: [
-      { title: "Adoption Process — Rachel Miniature Dachshunds" },
+      { title: "Adoption Process — Country Charm Dachshunds" },
       { name: "description", content: "Step-by-step guide to adopting one of our miniature dachshund puppies — from inquiry to bringing your puppy home." },
       { property: "og:url", content: "/adoption-process" },
     ],

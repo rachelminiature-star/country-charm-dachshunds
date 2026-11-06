@@ -14,7 +14,7 @@ export async function forwardEmail({
     const fd = new FormData();
     fd.append("access_key", WEB3FORMS_ACCESS_KEY);
     fd.append("subject", _subject || "New website submission");
-    fd.append("from_name", "Rachel Miniature Dachshunds");
+    fd.append("from_name", "Country Charm Dachshunds");
     for (const [k, v] of Object.entries(rest)) fd.append(k, v ?? "");
 
     const res = await fetch("https://api.web3forms.com/submit", {

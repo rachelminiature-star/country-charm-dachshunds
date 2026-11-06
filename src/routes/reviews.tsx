@@ -9,9 +9,9 @@ import { testimonialsQuery } from "@/lib/queries";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — Rachel Miniature Dachshunds" },
-      { name: "description", content: "Read what families say about their Rachel Miniature Dachshund puppies — honest reviews from homes across the country." },
-      { property: "og:title", content: "Reviews — Rachel Miniature Dachshunds" },
+      { title: "Reviews — Country Charm Dachshunds" },
+      { name: "description", content: "Read what families say about their Country Charm Dachshund puppies — honest reviews from homes across the country." },
+      { property: "og:title", content: "Reviews — Country Charm Dachshunds" },
       { property: "og:description", content: "Honest reviews from families who welcomed home one of our miniature dachshund puppies." },
       { property: "og:url", content: "/reviews" },
     ],

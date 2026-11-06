@@ -46,8 +46,8 @@ function GalleryAdmin() {
     const path = `gallery/${Date.now()}-${file.name.replace(/[^a-z0-9.-]/gi, "_")}`;
     const { error } = await supabase.storage.from("puppy-media").upload(path, file);
     if (error) return toast.error(error.message);
-    const { data: signed } = await supabase.storage.from("puppy-media").createSignedUrl(path, 60 * 60 * 24 * 365);
-    if (signed?.signedUrl) setEditing((e) => e ? { ...e, url: signed.signedUrl } : e);
+    const { data: pub } = supabase.storage.from("puppy-media").getPublicUrl(path);
+    setEditing((e) => e ? { ...e, url: pub.publicUrl } : e);
   }
 
   return (
@@ -177,9 +177,8 @@ function BulkUploadDialog({ open, onOpenChange, existingCount, batchCreateFn, on
         const path = `gallery/${Date.now()}-${item.file.name.replace(/[^a-z0-9.-]/gi, "_")}`;
         const { error: upError } = await supabase.storage.from("puppy-media").upload(path, item.file);
         if (upError) throw upError;
-        const { data: signed, error: signError } = await supabase.storage.from("puppy-media").createSignedUrl(path, 60 * 60 * 24 * 365);
-        if (signError || !signed?.signedUrl) throw signError || new Error("Could not create signed URL");
-        galleryRows.push({ url: signed.signedUrl, caption: item.caption.trim(), category, sort_order: existingCount + i, width: null, height: null });
+        const { data: pub } = supabase.storage.from("puppy-media").getPublicUrl(path);
+        galleryRows.push({ url: pub.publicUrl, caption: item.caption.trim(), category, sort_order: existingCount + i, width: null, height: null });
         updateFile(i, { status: "done" });
         uploadedCount++;
         setOverall((o) => ({ ...o, done: uploadedCount }));

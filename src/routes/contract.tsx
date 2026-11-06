@@ -15,9 +15,9 @@ import { forwardEmail } from "@/lib/email";
 export const Route = createFileRoute("/contract")({
   head: () => ({
     meta: [
-      { title: "Buyer's Contract & Health Guarantee — Rachel Miniature Dachshunds" },
+      { title: "Buyer's Contract & Health Guarantee — Country Charm Dachshunds" },
       { name: "description", content: "Our buyer's contract and 1-year health guarantee for every miniature dachshund puppy. Review the terms and sign electronically." },
-      { property: "og:title", content: "Buyer's Contract & Health Guarantee — Rachel Miniature Dachshunds" },
+      { property: "og:title", content: "Buyer's Contract & Health Guarantee — Country Charm Dachshunds" },
       { property: "og:description", content: "Health guarantee, replacement policy, and signed buyer's contract for every puppy." },
       { property: "og:url", content: "/contract" },
     ],
@@ -34,7 +34,7 @@ function ContractPage() {
           <SectionHeader
             eyebrow="Buyer's Contract"
             title="Contract & Health Guarantee"
-            description="Every Rachel Miniature Dachshund puppy goes home with a signed buyer's contract and a one-year health guarantee. Please review carefully, then sign below."
+            description="Every Country Charm Dachshund puppy goes home with a signed buyer's contract and a one-year health guarantee. Please review carefully, then sign below."
           />
 
           <ContractTerms />
@@ -53,7 +53,7 @@ function ContractTerms() {
           <FileText className="h-5 w-5" />
         </span>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Rachel Miniature Dachshund Puppies</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Country Charm Dachshund Puppies</p>
           <h2 className="mt-1 font-display text-2xl text-foreground">Buyer's Contract and Health Guarantee</h2>
         </div>
       </header>
@@ -106,7 +106,7 @@ function ContractTerms() {
       <div className="flex items-start gap-3 rounded-2xl bg-surface p-4 text-xs text-muted-foreground">
         <ShieldCheck className="h-4 w-4 shrink-0 text-sand-dark" />
         <p>
-          This contract is between Rachel Miniature Dachshunds (seller) and the buyer named below. By signing, both
+          This contract is between Country Charm Dachshunds (seller) and the buyer named below. By signing, both
           parties agree to the terms above.
         </p>
       </div>

@@ -1,1 +1,0 @@
-DELETE FROM public.messages WHERE email = 'test@example.com' AND (subject ILIKE '%delivery test%' OR name ILIKE '%Delivery Test%');

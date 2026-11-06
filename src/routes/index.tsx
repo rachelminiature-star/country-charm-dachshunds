@@ -28,9 +28,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rachel Miniature Dachshunds — Health-Tested AKC Puppies" },
+      { title: "Country Charm Dachshunds — Health-Tested AKC Puppies" },
       { name: "description", content: SITE.description },
-      { property: "og:title", content: "Rachel Miniature Dachshunds" },
+      { property: "og:title", content: "Country Charm Dachshunds" },
       { property: "og:description", content: SITE.description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -89,7 +89,7 @@ function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], reduced ? ["0%", "0%"] : ["0%", "18%"]);
   const scale = useTransform(scrollYProgress, [0, 1], reduced ? [1, 1] : [1, 1.08]);
 
-  const heroSrc = "https://mhhxbxrgxhqurstmcjwh.supabase.co/storage/v1/object/sign/puppy-media/gallery/1781737252848-23.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV82ODc1YWJkMi05MDY4LTQxODMtYjAzMC1lMDg3YzE0NWQwZmYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwdXBweS1tZWRpYS9nYWxsZXJ5LzE3ODE3MzcyNTI4NDgtMjMuanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTczNzI1MSwiZXhwIjoxODEzMjczMjUxfQ.YbmUuwWjRm7AfhEf3VmsAYeP3umBelPH-mCoJPT6mZo";
+  const heroSrc = "https://bcyjzwyrsdgjizijfxpf.supabase.co/storage/v1/object/public/puppy-media/gallery/1781737252848-23.jpg";
 
   const headline = ["Heirloom", "miniature", "dachshunds."];
 
@@ -382,7 +382,7 @@ function BreederStory() {
             Twenty years of devotion to one extraordinary breed.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Rachel Miniature Dachshunds started the way every great breeder begins — with a single soul-companion of a dog
+            Country Charm Dachshunds started the way every great breeder begins — with a single soul-companion of a dog
             and a quiet promise to protect what makes this breed wonderful. Two decades later we're still keeping that promise:
             small, thoughtful litters, health-tested parents, and families chosen with the same care we choose our breeding lines.
           </p>

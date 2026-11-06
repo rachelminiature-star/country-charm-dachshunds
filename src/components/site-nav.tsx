@@ -42,13 +42,13 @@ export function SiteNav({ transparentOnTop = false }: { transparentOnTop?: boole
               "grid h-9 w-9 place-items-center rounded-full transition-colors",
               solid ? "bg-foreground text-background" : "bg-white/90 text-foreground"
             )}>
-              <span className="font-display text-lg font-semibold">R</span>
+              <span className="font-display text-lg font-semibold">C</span>
             </span>
             <span className={cn(
               "hidden font-display text-lg font-medium tracking-tight transition-colors sm:block",
               solid ? "text-foreground" : "text-white drop-shadow"
             )}>
-              Rachel <span className="text-sand">Dachshunds</span>
+              Country Charm <span className="text-sand">Dachshunds</span>
             </span>
           </Link>
 
@@ -124,10 +124,10 @@ export function SiteNav({ transparentOnTop = false }: { transparentOnTop?: boole
               <div className="flex items-center justify-between border-b border-border px-5 py-4">
                 <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2">
                   <span className="grid h-9 w-9 place-items-center rounded-full bg-foreground text-background">
-                    <span className="font-display text-lg font-semibold">R</span>
+                    <span className="font-display text-lg font-semibold">C</span>
                   </span>
                   <span className="font-display text-lg text-foreground">
-                    Rachel <span className="text-sand-dark">Dachshunds</span>
+                    Country Charm <span className="text-sand-dark">Dachshunds</span>
                   </span>
                 </Link>
                 <button

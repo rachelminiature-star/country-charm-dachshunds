@@ -21,8 +21,8 @@ export const Route = createFileRoute("/puppies/$slug")({
   },
   head: ({ params }) => ({
     meta: [
-      { title: `Meet a Puppy — Rachel Miniature Dachshunds` },
-      { name: "description", content: `A health-tested AKC miniature dachshund puppy from Rachel Miniature Dachshunds.` },
+      { title: `Meet a Puppy — Country Charm Dachshunds` },
+      { name: "description", content: `A health-tested AKC miniature dachshund puppy from Country Charm Dachshunds.` },
       { property: "og:url", content: `/puppies/${params.slug}` },
       { property: "og:type", content: "product" },
     ],

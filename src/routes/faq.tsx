@@ -9,7 +9,7 @@ import { faqsQuery } from "@/lib/queries";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Rachel Miniature Dachshunds" },
+      { title: "FAQ — Country Charm Dachshunds" },
       { name: "description", content: "Answers to common questions about our miniature dachshund puppies, our process, health guarantee, and pricing." },
       { property: "og:url", content: "/faq" },
     ],

@@ -15,7 +15,7 @@ export function CartDrawer() {
 
 
   const message = encodeURIComponent(
-    `Hello Rachel Dachshunds — I'd like to inquire about:\n\n` +
+    `Hello Country Charm Dachshunds — I'd like to inquire about:\n\n` +
     items.map((i) => `• ${i.name} (${i.color ?? ""}) — ${formatPrice(i.price_cents)}`).join("\n") +
     `\n\nTotal: ${formatPrice(subtotal)}`
   );

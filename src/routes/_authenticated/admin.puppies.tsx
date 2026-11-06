@@ -128,8 +128,8 @@ function PuppyDialog({ open, value, onClose, onSave, saving }: {
     const path = `puppies/${Date.now()}-${Math.random().toString(36).slice(2, 6)}-${file.name.replace(/[^a-z0-9.-]/gi, "_")}`;
     const { error } = await supabase.storage.from("puppy-media").upload(path, file, { upsert: false, contentType: file.type });
     if (error) { toast.error(error.message); return null; }
-    const { data: signed } = await supabase.storage.from("puppy-media").createSignedUrl(path, 60 * 60 * 24 * 365);
-    return signed?.signedUrl ?? null;
+    const { data: pub } = supabase.storage.from("puppy-media").getPublicUrl(path);
+    return pub.publicUrl;
   }
 
   async function handleUpload(files: FileList | null, target: "cover" | "gallery" | "videos") {

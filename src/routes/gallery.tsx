@@ -11,7 +11,7 @@ import { resolveImage } from "@/lib/images";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Rachel Miniature Dachshunds" },
+      { title: "Gallery — Country Charm Dachshunds" },
       { name: "description", content: "A look inside our home — puppies, parents, and the quiet moments that make our program what it is." },
       { property: "og:url", content: "/gallery" },
     ],

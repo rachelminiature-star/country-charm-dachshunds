@@ -10,9 +10,9 @@ export function SiteFooter() {
           <div>
             <Link to="/" className="flex items-center gap-2">
               <span className="grid h-10 w-10 place-items-center rounded-full bg-foreground text-background">
-                <span className="font-display text-lg">R</span>
+                <span className="font-display text-lg">C</span>
               </span>
-              <span className="font-display text-xl">Rachel <span className="text-sand">Dachshunds</span></span>
+              <span className="font-display text-xl">Country Charm <span className="text-sand">Dachshunds</span></span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground leading-relaxed">
               {SITE.tagline}

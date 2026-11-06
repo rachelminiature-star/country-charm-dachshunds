@@ -1,4 +1,4 @@
-# Rachel Miniature Dachshunds — Build Plan
+# Country Charm Dachshunds — Build Plan
 
 A luxury, light-mode breeder website with a full admin dashboard. Direction: **Minimal Sand & Slate** — bright white canvas, warm sand `#B8A082`, slate ink `#1C1B19`, subtle bronze, generous whitespace, refined serif display + clean sans body.
 
@@ -63,7 +63,7 @@ Loaders use `queryClient.ensureQueryData` + `useSuspenseQuery`. Mutations via `u
 
 ## Contact Form
 
-Two paths: writes a row to `messages` (admin inbox) AND posts to `https://formsubmit.co/info@rachelminiaturedachshunds.com` (email). Zod validation, honeypot `_honey`, loading/success/error states.
+Two paths: writes a row to `messages` (admin inbox) AND posts to `https://formsubmit.co/info@countrycharmdachshunds.com` (email). Zod validation, honeypot `_honey`, loading/success/error states.
 
 ## Admin Dashboard
 

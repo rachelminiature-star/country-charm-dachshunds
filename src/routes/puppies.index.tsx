@@ -11,9 +11,9 @@ import { SITE } from "@/lib/site";
 export const Route = createFileRoute("/puppies/")({
   head: () => ({
     meta: [
-      { title: "Available Puppies — Rachel Miniature Dachshunds" },
+      { title: "Available Puppies — Country Charm Dachshunds" },
       { name: "description", content: "Browse our available AKC-registered miniature dachshund puppies. Long-haired, short-haired, English cream, red, black & tan, dapple — all health-tested and home-raised." },
-      { property: "og:title", content: "Available Puppies — Rachel Miniature Dachshunds" },
+      { property: "og:title", content: "Available Puppies — Country Charm Dachshunds" },
       { property: "og:url", content: "/puppies" },
     ],
     links: [{ rel: "canonical", href: "/puppies" }],

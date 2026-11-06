@@ -12,8 +12,8 @@ export const Route = createFileRoute("/auth")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Admin Sign-In — Rachel Miniature Dachshunds" },
-      { name: "description", content: "Secure admin sign-in for Rachel Miniature Dachshunds." },
+      { title: "Admin Sign-In — Country Charm Dachshunds" },
+      { name: "description", content: "Secure admin sign-in for Country Charm Dachshunds." },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
