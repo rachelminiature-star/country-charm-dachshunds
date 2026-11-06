@@ -89,7 +89,7 @@ function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], reduced ? ["0%", "0%"] : ["0%", "18%"]);
   const scale = useTransform(scrollYProgress, [0, 1], reduced ? [1, 1] : [1, 1.08]);
 
-  const heroSrc = "https://bcyjzwyrsdgjizijfxpf.supabase.co/storage/v1/object/public/puppy-media/gallery/1781737252848-23.jpg";
+  const heroSrc = "/images/hero.jpg";
 
   const headline = ["Heirloom", "miniature", "dachshunds."];
 
