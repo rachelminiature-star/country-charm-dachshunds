@@ -1,5 +1,7 @@
 # Keeps the free-tier Supabase project from pausing after 7 days of inactivity.
 # Runs a tiny read-only query against the public "puppies" table twice a week.
+# Uses the public URL + publishable (anon) key from wrangler.jsonc, so no
+# GitHub secrets are required.
 name: Supabase keep-alive
 
 on:
@@ -11,11 +13,13 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Ping Supabase
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
         run: |
+          get() { grep -oE "\"$1\": *\"[^\"]*\"" wrangler.jsonc | head -1 | sed -E 's/.*: *"(.*)"/\1/'; }
+          SUPABASE_URL=$(get SUPABASE_URL)
+          SUPABASE_KEY=$(get SUPABASE_PUBLISHABLE_KEY)
           status=$(curl -s -o /dev/null -w "%{http_code}" \
             "$SUPABASE_URL/rest/v1/puppies?select=id&limit=1" \
             -H "apikey: $SUPABASE_KEY" \
