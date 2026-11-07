@@ -2,7 +2,7 @@
 // Web3Forms only accepts browser-side submissions on the free plan, so this
 // runs in the visitor's browser. FormData keeps it a "simple" CORS request.
 // The access key is publishable by design.
-const WEB3FORMS_ACCESS_KEY = "b3da3eca-66b7-45f0-b9d1-1be7e78d3b30";
+const WEB3FORMS_ACCESS_KEY = "27dc9c51-ed2c-45be-bd35-b35eda847c79";
 
 export async function forwardEmail({
   data,
