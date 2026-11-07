@@ -237,3 +237,20 @@ export const deleteFaq = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+// ───── Site settings ─────
+const SETTING_KEYS = ["hero_image"] as const;
+
+export const setSiteSetting = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((d) =>
+    z.object({ key: z.enum(SETTING_KEYS), value: z.string().url().max(2000).nullable() }).parse(d)
+  )
+  .handler(async ({ data, context }) => {
+    await assertAdmin(context);
+    const { error } = await context.supabase
+      .from("site_settings" as never)
+      .upsert({ key: data.key, value: data.value, updated_at: new Date().toISOString() } as never);
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });

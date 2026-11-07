@@ -1,7 +1,7 @@
 import { createFileRoute, Link, Outlet, useNavigate, useRouterState } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { LayoutDashboard, Dog, Image as ImageIcon, MessageSquare, Star, HelpCircle, LogOut, ExternalLink } from "lucide-react";
+import { LayoutDashboard, Dog, Image as ImageIcon, MessageSquare, Star, HelpCircle, LogOut, ExternalLink, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/site";
 
@@ -18,6 +18,7 @@ export const Route = createFileRoute("/_authenticated/admin")({
 type NavItem = { to: string; label: string; icon: typeof LayoutDashboard; exact?: boolean };
 const NAV: NavItem[] = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { to: "/admin/homepage", label: "Homepage", icon: Home },
   { to: "/admin/puppies", label: "Puppies", icon: Dog },
   { to: "/admin/gallery", label: "Gallery", icon: ImageIcon },
   { to: "/admin/testimonials", label: "Testimonials", icon: Star },

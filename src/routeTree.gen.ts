@@ -28,6 +28,7 @@ import { Route as PuppiesSlugRouteImport } from './routes/puppies.$slug'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
 import { Route as AuthenticatedAdminFaqsRouteImport } from './routes/_authenticated/admin.faqs'
 import { Route as AuthenticatedAdminGalleryRouteImport } from './routes/_authenticated/admin.gallery'
+import { Route as AuthenticatedAdminHomepageRouteImport } from './routes/_authenticated/admin.homepage'
 import { Route as AuthenticatedAdminMessagesRouteImport } from './routes/_authenticated/admin.messages'
 import { Route as AuthenticatedAdminPuppiesRouteImport } from './routes/_authenticated/admin.puppies'
 import { Route as AuthenticatedAdminTestimonialsRouteImport } from './routes/_authenticated/admin.testimonials'
@@ -127,6 +128,12 @@ const AuthenticatedAdminGalleryRoute =
     path: '/gallery',
     getParentRoute: () => AuthenticatedAdminRoute,
   } as any)
+const AuthenticatedAdminHomepageRoute =
+  AuthenticatedAdminHomepageRouteImport.update({
+    id: '/homepage',
+    path: '/homepage',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
 const AuthenticatedAdminMessagesRoute =
   AuthenticatedAdminMessagesRouteImport.update({
     id: '/messages',
@@ -164,6 +171,7 @@ export interface FileRoutesByFullPath {
   '/puppies/': typeof PuppiesIndexRoute
   '/admin/faqs': typeof AuthenticatedAdminFaqsRoute
   '/admin/gallery': typeof AuthenticatedAdminGalleryRoute
+  '/admin/homepage': typeof AuthenticatedAdminHomepageRoute
   '/admin/messages': typeof AuthenticatedAdminMessagesRoute
   '/admin/puppies': typeof AuthenticatedAdminPuppiesRoute
   '/admin/testimonials': typeof AuthenticatedAdminTestimonialsRoute
@@ -186,6 +194,7 @@ export interface FileRoutesByTo {
   '/puppies': typeof PuppiesIndexRoute
   '/admin/faqs': typeof AuthenticatedAdminFaqsRoute
   '/admin/gallery': typeof AuthenticatedAdminGalleryRoute
+  '/admin/homepage': typeof AuthenticatedAdminHomepageRoute
   '/admin/messages': typeof AuthenticatedAdminMessagesRoute
   '/admin/puppies': typeof AuthenticatedAdminPuppiesRoute
   '/admin/testimonials': typeof AuthenticatedAdminTestimonialsRoute
@@ -211,6 +220,7 @@ export interface FileRoutesById {
   '/puppies/': typeof PuppiesIndexRoute
   '/_authenticated/admin/faqs': typeof AuthenticatedAdminFaqsRoute
   '/_authenticated/admin/gallery': typeof AuthenticatedAdminGalleryRoute
+  '/_authenticated/admin/homepage': typeof AuthenticatedAdminHomepageRoute
   '/_authenticated/admin/messages': typeof AuthenticatedAdminMessagesRoute
   '/_authenticated/admin/puppies': typeof AuthenticatedAdminPuppiesRoute
   '/_authenticated/admin/testimonials': typeof AuthenticatedAdminTestimonialsRoute
@@ -236,6 +246,7 @@ export interface FileRouteTypes {
     | '/puppies/'
     | '/admin/faqs'
     | '/admin/gallery'
+    | '/admin/homepage'
     | '/admin/messages'
     | '/admin/puppies'
     | '/admin/testimonials'
@@ -258,6 +269,7 @@ export interface FileRouteTypes {
     | '/puppies'
     | '/admin/faqs'
     | '/admin/gallery'
+    | '/admin/homepage'
     | '/admin/messages'
     | '/admin/puppies'
     | '/admin/testimonials'
@@ -282,6 +294,7 @@ export interface FileRouteTypes {
     | '/puppies/'
     | '/_authenticated/admin/faqs'
     | '/_authenticated/admin/gallery'
+    | '/_authenticated/admin/homepage'
     | '/_authenticated/admin/messages'
     | '/_authenticated/admin/puppies'
     | '/_authenticated/admin/testimonials'
@@ -441,6 +454,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminGalleryRouteImport
       parentRoute: typeof AuthenticatedAdminRoute
     }
+    '/_authenticated/admin/homepage': {
+      id: '/_authenticated/admin/homepage'
+      path: '/homepage'
+      fullPath: '/admin/homepage'
+      preLoaderRoute: typeof AuthenticatedAdminHomepageRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
     '/_authenticated/admin/messages': {
       id: '/_authenticated/admin/messages'
       path: '/messages'
@@ -468,6 +488,7 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedAdminRouteChildren {
   AuthenticatedAdminFaqsRoute: typeof AuthenticatedAdminFaqsRoute
   AuthenticatedAdminGalleryRoute: typeof AuthenticatedAdminGalleryRoute
+  AuthenticatedAdminHomepageRoute: typeof AuthenticatedAdminHomepageRoute
   AuthenticatedAdminMessagesRoute: typeof AuthenticatedAdminMessagesRoute
   AuthenticatedAdminPuppiesRoute: typeof AuthenticatedAdminPuppiesRoute
   AuthenticatedAdminTestimonialsRoute: typeof AuthenticatedAdminTestimonialsRoute
@@ -477,6 +498,7 @@ interface AuthenticatedAdminRouteChildren {
 const AuthenticatedAdminRouteChildren: AuthenticatedAdminRouteChildren = {
   AuthenticatedAdminFaqsRoute: AuthenticatedAdminFaqsRoute,
   AuthenticatedAdminGalleryRoute: AuthenticatedAdminGalleryRoute,
+  AuthenticatedAdminHomepageRoute: AuthenticatedAdminHomepageRoute,
   AuthenticatedAdminMessagesRoute: AuthenticatedAdminMessagesRoute,
   AuthenticatedAdminPuppiesRoute: AuthenticatedAdminPuppiesRoute,
   AuthenticatedAdminTestimonialsRoute: AuthenticatedAdminTestimonialsRoute,

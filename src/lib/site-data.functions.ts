@@ -91,3 +91,12 @@ export const submitMessage = createServerFn({ method: "POST" })
     if (error) throw new Error(error.message);
     return { ok: true };
   });
+
+// ───── Site settings (e.g. homepage hero image) ─────
+export const getSiteSettings = createServerFn({ method: "GET" }).handler(async () => {
+  const sb = getPublicClient();
+  const { data, error } = await sb.from("site_settings" as never).select("key, value");
+  const settings: Record<string, string | null> = {};
+  if (!error) for (const row of (data ?? []) as { key: string; value: string | null }[]) settings[row.key] = row.value;
+  return settings;
+});

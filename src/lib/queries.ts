@@ -1,5 +1,5 @@
 import { queryOptions } from "@tanstack/react-query";
-import { listPuppies, getPuppyBySlug, listGallery, listTestimonials, listFaqs } from "./site-data.functions";
+import { listPuppies, getPuppyBySlug, listGallery, listTestimonials, listFaqs, getSiteSettings } from "./site-data.functions";
 
 export const puppiesQuery = () =>
   queryOptions({
@@ -33,5 +33,12 @@ export const faqsQuery = () =>
   queryOptions({
     queryKey: ["faqs"],
     queryFn: () => listFaqs(),
+    staleTime: 60_000,
+  });
+
+export const siteSettingsQuery = () =>
+  queryOptions({
+    queryKey: ["site-settings"],
+    queryFn: () => getSiteSettings(),
     staleTime: 60_000,
   });

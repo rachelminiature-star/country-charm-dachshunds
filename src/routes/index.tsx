@@ -18,8 +18,8 @@ import { SiteLayout } from "@/components/site-layout";
 import { InquiryModal } from "@/components/inquiry-modal";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion";
 import { SectionHeader, Eyebrow } from "@/components/section-header";
-import { puppiesQuery, testimonialsQuery, faqsQuery, galleryQuery } from "@/lib/queries";
-import { resolveImage, aboutImage, breederImage } from "@/lib/images";
+import { puppiesQuery, testimonialsQuery, faqsQuery, galleryQuery, siteSettingsQuery } from "@/lib/queries";
+import { resolveImage, aboutImage, breederImage, DEFAULT_HERO_IMAGE } from "@/lib/images";
 import { formatPrice, puppyAge, SITE } from "@/lib/site";
 import { useCart } from "@/lib/cart";
 import { cn } from "@/lib/utils";
@@ -57,6 +57,7 @@ export const Route = createFileRoute("/")({
       context.queryClient.ensureQueryData(testimonialsQuery()),
       context.queryClient.ensureQueryData(faqsQuery()),
       context.queryClient.ensureQueryData(galleryQuery()),
+      context.queryClient.ensureQueryData(siteSettingsQuery()),
     ]);
   },
   component: HomePage,
@@ -89,7 +90,8 @@ function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], reduced ? ["0%", "0%"] : ["0%", "18%"]);
   const scale = useTransform(scrollYProgress, [0, 1], reduced ? [1, 1] : [1, 1.08]);
 
-  const heroSrc = "/images/hero.jpg";
+  const { data: settings } = useSuspenseQuery(siteSettingsQuery());
+  const heroSrc = settings.hero_image || DEFAULT_HERO_IMAGE;
 
   const headline = ["Heirloom", "miniature", "dachshunds."];
 

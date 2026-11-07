@@ -38,3 +38,6 @@ export function resolveImage(url: string | null | undefined, fallback: string = 
 
 export const FALLBACK_IMAGE = hero;
 export { hero as heroImage, aboutStory as aboutImage, breeder as breederImage };
+
+/** Homepage hero image used when the admin has not uploaded a custom one. */
+export const DEFAULT_HERO_IMAGE = "/images/hero.jpg";
